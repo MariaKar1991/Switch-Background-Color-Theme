@@ -1,0 +1,18 @@
+<div class="">
+  <section class="p-4 switcher-container" (click)="toggleSwitcherState()">
+    <article
+      class="switcher-circle-Container"
+      [style.border]="switcherState ? '1px solid red' : '1px solid black'"
+    >
+      <div
+        class="switcher-circle"
+        [style.left]="switcherState ? 'calc(100px / 1.3)' : '1px'"
+        [style.backgroundColor]="switcherState ? 'red' : 'black'"
+      ></div>
+    </article>
+
+    <section class="text-center text-capitalise mt-2">
+      <p>Switch Status: {{ switcherState }}</p>
+    </section>
+  </section>
+</div>

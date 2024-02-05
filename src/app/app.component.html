@@ -1,0 +1,45 @@
+<section
+  class="p-5 border border-danger fs-5"
+  [style.backgroundColor]="receivedSwitcherState ? 'rgb(63, 61, 86)' : 'white'"
+  [style.color]="receivedSwitcherState ? 'white' : 'black'"
+>
+  <header class="d-flex justify-content-between">
+    <div>
+      <h4>LOGO</h4>
+    </div>
+    <div class="d-flex nav justify-content-between g-4">
+      <p>Home</p>
+      <p>Contact</p>
+
+      <p>About</p>
+      <div class="switcher">
+        <app-switcher
+          (sendSwitcherState)="handleSwitcherChange($event)"
+        ></app-switcher>
+      </div>
+    </div>
+  </header>
+  <main class="mt-4 d-flex justify-content-between">
+    <div class="mt-3">
+      <h2>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam adipisci
+        minima quisquam, nisi deserunt tempore aut nihil porro vel eius modi
+        inventore reprehenderit aliquam, dicta distinctio, dolor harum veritatis
+        corrupti.
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+        consectetur sapiente exercitationem esse sit consequatur veniam debitis
+        beatae voluptatum voluptates, nihil minima aspernatur obcaecati nemo.
+        Eius, placeat dolor! Quam, reprehenderit?
+      </p>
+    </div>
+    <div class="illustration">
+      @if (receivedSwitcherState) {
+      <img class="w-100" src="../assets/walk.svg" alt="" />
+      } @if (!receivedSwitcherState) {
+      <img class="w-100" src="../assets/woman.svg" alt="" />
+      }
+    </div>
+  </main>
+</section>
