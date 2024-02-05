@@ -6,4 +6,4 @@ This Angular project provides a simple color theme switcher for the background. 
 ## Features
 Color Theme Switching: Toggle between different color themes dynamically.
 
-Happy Coding!
+## Happy Coding!
